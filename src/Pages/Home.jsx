@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Card from '../Components/Card';
+import Card from '../Components/CategoryCard';
+import ProductCard from '../Components/ProductCard';
 
 
 const Home = () => {
@@ -111,6 +112,11 @@ const Home = () => {
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
                     <Card heading="Jewellery" product={jewellery} />
                 </div>
+            </section>
+
+
+            <section className='grid grid-cols-2 lg:grid-cols-4 justify-items-center gap-8 px-6 py-10'>
+                <ProductCard products={allProduct}/>
             </section>
 
 
