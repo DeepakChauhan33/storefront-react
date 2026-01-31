@@ -18,6 +18,7 @@ const Home = () => {
         try {
             let respose = await axios.get("https://fakestoreapi.com/products")
             setAllProduct(respose.data);
+            console.log(respose.data)
 
         } catch (error) {
             console.log(error);
@@ -43,7 +44,7 @@ const Home = () => {
     return (
         <>
 
-            <section className=' bg-gray-200 flex items-center justify-start p-10'>
+            <section className='  flex items-center justify-start p-10'>
 
 
 
@@ -93,25 +94,24 @@ const Home = () => {
             </section> */}
 
 
-            <section className=" w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8  bg-gray-100">
+            <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-200/50 ">
                 
-                <div className="bg-white rounded-xl shadow-md p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300 ">
                     <Card heading="Men's Clothing" product={menCloths} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
                     <Card heading="Women's Clothing" product={womenCloths} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
                     <Card heading="Electronics" product={electronics} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
                     <Card heading="Jewellery" product={jewellery} />
                 </div>
             </section>
-
 
 
         </>
