@@ -2,7 +2,6 @@ import React from 'react'
 
 const ProductCard = ({ products }) => {
 
-    console.log(products);
 
     return (
 

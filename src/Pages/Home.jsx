@@ -19,7 +19,6 @@ const Home = () => {
         try {
             let respose = await axios.get("https://fakestoreapi.com/products")
             setAllProduct(respose.data);
-            console.log(respose.data)
 
         } catch (error) {
             console.log(error);
