@@ -15,7 +15,7 @@ const ProductCard = ({ products }) => {
 
                     {/* Image Div */}
                     <div className='h-50 w-full'>
-                        <img src={items.image} alt={items.title}  className='h-full w-full object-contain'/>
+                        <img src={items.image} alt={items.title}  className='h-full w-full bg-gray-200 p-3 object-contain'/>
                     </div>
 
                     {/* Product Price */}
@@ -32,8 +32,14 @@ const ProductCard = ({ products }) => {
 
                     {/* Product Description */}
                     <div>
-                        <p>{items.description}</p>
+                        <p className='line-clamp-4'>{items.description}</p>
                     </div>
+
+
+                    {/*Add to Cart Button */}
+                    <button className='px-3 py-4 w-1/2 border'>
+                        Buy
+                    </button>
 
 
 

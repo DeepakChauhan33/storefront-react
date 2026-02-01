@@ -96,19 +96,19 @@ const Home = () => {
 
             <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-200/50 ">
                 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300 ">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
                     <Card heading="Men's Clothing" product={menCloths} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     <Card heading="Women's Clothing" product={womenCloths} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     <Card heading="Electronics" product={electronics} />
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     <Card heading="Jewellery" product={jewellery} />
                 </div>
             </section>
