@@ -114,8 +114,14 @@ const Home = () => {
             </section>
 
 
-            <section className='grid grid-cols-2 lg:grid-cols-4 justify-items-center gap-8 px-6 py-10'>
-                <ProductCard products={allProduct}/>
+            <section className='bg-[#f8fafcf0] space-y-6 px-6 py-10'>
+                <p className='text-2xl font-semibold'>See more products here</p>
+
+                <div className=' grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-8'>
+                    <ProductCard products={allProduct}/>
+                </div>
+
+                
             </section>
 
 
