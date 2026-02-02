@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loader from '../Components/Loader';
 
 const ProductPage = () => {
 
@@ -32,7 +33,7 @@ const ProductPage = () => {
 
     return (
         <>
-            {product ? <p>{product.title}</p> : <p>Loading...</p>}
+            {product ? <p>{product.title}</p> : <Loader/>}
         </>
     )
 }

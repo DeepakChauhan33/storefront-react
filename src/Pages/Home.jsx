@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios, { all } from 'axios';
 import React, { useEffect, useState } from 'react'
 import Card from '../Components/CategoryCard';
 import ProductCard from '../Components/ProductCard';
+import Loader from '../Components/Loader';
 
 
 const Home = () => {
@@ -76,19 +77,19 @@ const Home = () => {
             <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-200/50 ">
                 
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
-                    <Card heading="Men's Clothing" product={menCloths} />
+                    {allProduct.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80}/>}
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    <Card heading="Women's Clothing" product={womenCloths} />
+                    {allProduct.length > 0 ? <Card heading="Women's Clothing" product={womenCloths} /> : <Loader size={80}/>}
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    <Card heading="Electronics" product={electronics} />
+                    {allProduct.length > 0 ? <Card heading="Electronics" product={electronics} /> : <Loader size={80}/>}
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    <Card heading="Jewellery" product={jewellery} />
+                    {allProduct.length > 0 ? <Card heading="Jewellery" product={jewellery} /> : <Loader size={80}/>}
                 </div>
             </section>
 
@@ -97,7 +98,7 @@ const Home = () => {
                 <p className='text-2xl font-semibold'>See more products here</p>
 
                 <div className=' grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-8'>
-                    <ProductCard products={allProduct}/>
+                    {allProduct.length > 0 ? <ProductCard products={allProduct} /> : <Loader size={50}/>}
                 </div>
 
                 

@@ -9,7 +9,7 @@ const Card = ({ product, heading }) => {
 
       <div className=' grid grid-cols-2 grid-rows-2 justify-items-center gap-4'>
         {product.slice(0, 4).map((item) => {
-          return <div className='h-auto ' id={item.id }>
+          return <div className='h-auto'>
             <div className='h-40 p-2 shadow-lg'>
               <img src={item.image} alt={item.title} className='object-contain h-full' />
             </div>
