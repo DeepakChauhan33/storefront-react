@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Signup from './Pages/Signup'
+import ProductPage from './Pages/ProductPage'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/signIn' element={<Signup />}></Route>
+        <Route path='/product/:pd_id' element={<ProductPage />}></Route>
       </Routes>
 
       

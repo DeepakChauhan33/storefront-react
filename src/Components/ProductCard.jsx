@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({ products }) => {
 
@@ -35,6 +36,7 @@ const ProductCard = ({ products }) => {
                     </div>
 
 
+                    {/* Div contain product price and button */}
                     <div className='flex  justify-between mt-3 '>
 
                         {/* Product Price */}
@@ -42,9 +44,11 @@ const ProductCard = ({ products }) => {
 
 
                         {/*Add to Cart Button */}
-                        <button className='px-3 py-3 w-[40%] bg-gray-800 rounded-sm text-white sm:text-sm md:text-sm hover:bg-black cursor-pointer '>
-                            Add to cart
-                        </button>
+                        <Link to={'/product/'+ items.id}>
+                            <button className='px-3 py-3 w-full bg-gray-800 rounded-sm text-white sm:text-sm md:text-sm hover:bg-black cursor-pointer '>
+                                Add to cart
+                            </button>
+                        </Link>
 
                     </div>
 

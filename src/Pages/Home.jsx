@@ -72,27 +72,6 @@ const Home = () => {
             </section>
 
 
-            {/* 
-            <section className=' grid grid-cols-2 grid-rows-2 justify-items-center items-center w-full p-8 h-auto bg-red-200'>
-
-                <div className='w-1/2 h-[500px] bg-amber-200'>
-                    <Card heading={"Men's clothing"} product={menCloths} />
-                </div>
-
-                <div className='w-1/2 h-[500px]'>
-                    <Card heading={"women's clothing"} product={womenCloths} />
-                </div>
-
-                <div className='w-1/2 h-[500px]'>
-                    <Card heading={"Electronics"} product={electronics} />
-                </div>
-
-                <div className='w-1/2 h-[500px]'>
-                    <Card heading={"jewellery"} product={jewellery} />
-                </div>
-
-            </section> */}
-
 
             <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-200/50 ">
                 
