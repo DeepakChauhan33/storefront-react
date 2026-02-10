@@ -1,5 +1,7 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Button from './Button';
 
 const ProductCard = ({ products }) => {
 
@@ -44,10 +46,8 @@ const ProductCard = ({ products }) => {
 
 
                         {/*Add to Cart Button */}
-                        <Link to={'/product/'+ items.id}>
-                            <button className='px-3 py-3 w-full bg-gray-800 rounded-sm text-white sm:text-sm md:text-sm hover:bg-black cursor-pointer '>
-                                Add to cart
-                            </button>
+                        <Link to={'/product/' + items.id}>
+                            <Button text="Add to Cart" bg="bg-gray-800 hover:bg-black text-white" />
                         </Link>
 
                     </div>
