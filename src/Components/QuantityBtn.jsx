@@ -21,7 +21,7 @@ const QuantityBtn = () => {
     <>
 
 
-    <div className='border border-gray-200 inline-block p-0'>
+    <div className='border border-gray-200 inline-block p-0' title='Add quamtity'>
         <button 
         className='px-2 bg-gray-300 hover:bg-gray-400 transition-colors duration-300 ease-in-out'
         onClick={hannleDecrease}>-</button>

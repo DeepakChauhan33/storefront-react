@@ -47,7 +47,7 @@ const ProductPageDesign = ({ product }) => {
 
   return (
     <>
-      <div className="bg-gray-100/30  flex flex-col md:flex-row items-start  shadow-md space-x-4  p-10">
+      <div className="bg-gray-100/30  flex flex-col md:flex-row items-start  shadow-md space-x-4 p-3 md:p-5 lg:p-10">
 
             {/* Product Image Container */}
           <div className="w-full  md:w-[40%] rounded-lg overflow-hidden mb-5 ">
@@ -60,8 +60,11 @@ const ProductPageDesign = ({ product }) => {
 
 
         {/* Product Details Container */}
-          <div className="flex flex-col w-[60%] p-4 gap-y-5">
-            <p className="text-md  md:text-2xl xl:text-3xl font-semibold">
+          <div className="flex flex-col w-full md:w-[60%] p-4 gap-y-5">
+
+
+            {/* Product Title */}
+            <p className="underline text-lg  md:text-2xl xl:text-3xl font-bold md:font-semibold">
               {product.title}
             </p>
 
@@ -72,7 +75,7 @@ const ProductPageDesign = ({ product }) => {
             <div className="">
               <h4 className="text-md font-semibold mb-2">Description</h4>
 
-              <p className="text-md">{product.description}</p>
+              <p className="text-sm lg:text-lg">{product.description}</p>
             </div>
 
 
@@ -87,17 +90,17 @@ const ProductPageDesign = ({ product }) => {
 
 
             {/* Price & Ratting */}
-            <div className="flex  justify-between items-center ">
+            <div className="flex  justify-between items-start lg:items-center  ">
                 {/* Price */}
                 <div className="space-x-2  ">
               
                     <div className="flex items-center gap-3">
-                        <span className="text-xl text-red-500">-10%</span>
+                        <span className="text-md lg:text-xl text-red-500">-10%</span>
 
-                        <span className="text-3xl font-bold">${product.price}</span>
+                        <span className="text-2xl xl:text-3xl font-bold">${product.price}</span>
                     </div>
 
-                    <div className="text-lg ">
+                    <div className="text-md lg:text-lg ">
                             <span>{`M.R.P : $`}</span>
                             <span className="line-through font-normal">
                             {plusPercentageValue(product.price)}</span>
@@ -106,7 +109,7 @@ const ProductPageDesign = ({ product }) => {
 
 
                 {/* Rating */}
-                <div className="text-lg">
+                <div className="text-sm lg:text-lg">
                     <span>{`${product.rating.rate} ${handleRating(product.rating.rate)} (${product.rating.count} reviews)`}</span>
                 </div>
 
@@ -131,7 +134,7 @@ const ProductPageDesign = ({ product }) => {
 
 
             <div className="border border-gray-200 p-3 rounded-2xl space-y-2">
-              <h4 className="text-xl font-semibold">Shipping</h4>
+              <h4 className="text-md lg:text-xl font-semibold">Shipping</h4>
 
               <ul className="grid grid-cols-2 ">
 
@@ -139,12 +142,12 @@ const ProductPageDesign = ({ product }) => {
 
                 {/* Warranty Information */}
                 <li className="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-lg">
-                  <div className="text-gray-700-600 text-3xl rounded-full p-3 bg-gray-400/30">
+                  <div className="text-gray-700-600 text-xl lg:text-2xl xl:text-3xl rounded-full p-3 bg-gray-400/30">
                     <FaShield />
                   </div>
 
                   <div>
-                    <p className="font-semibold text-sm leading-none">
+                    <p className="font-semibold text-xs md:text-sm lg:text-md leading-none">
                       Warranty
                     </p>
                     <span className="text-xs text-gray-500">
@@ -158,12 +161,12 @@ const ProductPageDesign = ({ product }) => {
 
                 {/*  Dilivery */}
                 <li className="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-lg">
-                  <div className="text-gray-700-600 text-3xl rounded-full p-3 bg-gray-400/30">
+                  <div className="text-gray-700-600 text-xl lg:text-2xl xl:text-3xl rounded-full p-3 bg-gray-400/30">
                     <FaTruck />
                   </div>
 
                   <div>
-                    <p className="font-semibold text-sm leading-none">
+                    <p className="font-semibold text-xs md:text-sm lg:text-md leading-none">
                       Delivery Time
                     </p>
                     <span className="text-xs text-gray-500">
@@ -178,12 +181,12 @@ const ProductPageDesign = ({ product }) => {
 
                 {/* Return Policy */}
                 <li className="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-lg">
-                  <div className="text-gray-700-600 text-3xl rounded-full p-3 bg-gray-400/30">
+                  <div className="text-gray-700-600 text-xl lg:text-2xl xl:text-3xl rounded-full p-3 bg-gray-400/30">
                     <TbTruckReturn />
                   </div>
 
                   <div>
-                    <p className="font-semibold text-sm leading-none">
+                    <p className="font-semibold text-xs md:text-sm lg:text-md leading-none">
                       Return Policy
                     </p>
                     <span className="text-xs text-gray-500">
@@ -197,12 +200,12 @@ const ProductPageDesign = ({ product }) => {
 
                 {/*  Cash on Delivery */}
                 <li className="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-lg">
-                  <div className="text-gray-700-600 text-3xl rounded-full p-3 bg-gray-400/30">
+                  <div className="text-gray-700-600 text-xl lg:text-2xl xl:text-3xl rounded-full p-3 bg-gray-400/30">
                     <RiCashLine />
                   </div>
 
                   <div>
-                    <p className="font-semibold text-sm leading-none">
+                    <p className="font-semibold text-xs md:text-sm lg:text-md leading-none">
                       Cash on Delivery
                     </p>
                     <span className="text-xs text-gray-500">Available</span>
@@ -218,7 +221,10 @@ const ProductPageDesign = ({ product }) => {
         <div>
             <h2>You might also like</h2>
 
-            
+            <div>
+                {/* Similar products based on category */}
+                
+            </div>
         </div>
 
     </>
