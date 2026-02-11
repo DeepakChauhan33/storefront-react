@@ -4,7 +4,7 @@ const Button = ({ text, bg }) => {
 
   return (
     <button 
-    className={`px-3 py-2 min-w-30 cursor-pointer rounded-md ${bg} transition-colors duration-300 ease-in-out`}
+    className={`px-3 py-3 min-w-30  w-[50%] cursor-pointer  ${bg} transition-colors duration-300 ease-in-out`}
     >
       {text}
     </button>
