@@ -54,7 +54,7 @@ const ProductPageDesign = ({ product }) => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-full bg-gray-300 p-4"
+              className="w-full h-90 md:h-full object-contain bg-gray-300 p-4"
             />
           </div>
 
