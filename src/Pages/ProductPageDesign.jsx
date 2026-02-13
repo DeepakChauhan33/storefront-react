@@ -82,7 +82,7 @@ const ProductPageDesign = ({ product }) => {
               {product.title}
             </p>
 
-            <div className='wishlistCant cursor-pointer' title='Add to wishlist' onClick={()=>{
+            <div className='wishlistCant cursor-pointer flex items-start' title='Add to wishlist' onClick={()=>{
               addToWishList()
             }}>
               <CiHeart className='text-3xl ' />
