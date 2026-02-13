@@ -45,36 +45,24 @@ const Home = () => {
     return (
         <>
 
-            <section className='  flex items-center justify-start p-10'>
+            <section 
+            className='h-screen bg-[url(https://plus.unsplash.com/premium_photo-1760574612930-79d88fd52ce6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center lg:bg-right  flex  justify-end items-start lg:items-center  lg:justify-start p-5 lg:p-10'>
 
 
-
-
-
-                <div className='flex flex-col justify-center items-start w-1/2 bg-red-300 text-center p-4'>
-                    <h3 className='text-3xl font-bold '>
-                        Elevate your Lifestyle
-
-                    </h3>
-
-
-                    <p className='flex'>
-                        Your New Everyday Style
-                    </p>
-
-                    <button className='textxl font-black'>
-                        See Work
-                    </button>
+                <div className='  max-w-xl space-y-6 '>
+                    <h1 className='text-3xl md:text-4xl lg:text-7xl font-extrabold'>Discover Style. <br></br>Define Yourself.</h1>
+                    <p className='text-gray-800 text-xl lg:text-2xl font-normal'>Minimal fashion for the modern world. Curated pieces that speak volumes through simplicity.</p>
+                    <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">Shop Now</button>
                 </div>
 
-                <div className='w-1/2'>
-                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-3454628-2918517.png" alt="" />
-                </div>
+
+
+                
             </section>
 
 
 
-            <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-200/50 ">
+            <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 p-8 bg-gray-200/50 ">
                 
                 <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
                     {allProduct.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80}/>}
@@ -103,6 +91,8 @@ const Home = () => {
 
                 
             </section>
+
+
 
 
         </>

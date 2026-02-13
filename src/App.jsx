@@ -8,6 +8,7 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Signup from './Pages/Signup'
 import ProductPage from './Pages/ProductPage'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
         <Route path='/product/:pd_id' element={<ProductPage />}></Route>
       </Routes>
 
+
+
+      <Footer/>
       
 
     </>
