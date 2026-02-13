@@ -51,7 +51,7 @@ const ProductCard = ({ products }) => {
 
                             {/*Add to Cart Button */}
 
-                            <Button text="Add to Cart" bg="bg-gray-800 hover:bg-black text-white" />
+                            <button className="bg-black text-white px-4 py-2 rounded-sm hover:bg-gray-800">Add to Cart</button>
 
 
                         </div>
