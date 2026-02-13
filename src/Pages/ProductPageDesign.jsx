@@ -60,7 +60,7 @@ const ProductPageDesign = ({ product }) => {
 
   return (
     <>
-      <div className="bg-gray-100/30  flex flex-col md:flex-row items-start  shadow-md space-x-4 p-3 md:p-5 lg:p-10">
+      <div className="bg-gray-100/30  flex flex-col md:flex-row items-start mt-3  shadow-md space-x-4 p-2 md:p-5 lg:p-10">
 
         {/* Product Image Container */}
         <div className="w-full  md:w-[40%] rounded-lg overflow-hidden mb-5 ">
@@ -73,7 +73,7 @@ const ProductPageDesign = ({ product }) => {
 
 
         {/* Product Details Container */}
-        <div className="flex flex-col w-full md:w-[60%] p-4 gap-y-5">
+        <div className="flex flex-col w-full md:w-[60%] p-2 gap-y-5">
 
 
           <div className='flex  justify-between items-center'>

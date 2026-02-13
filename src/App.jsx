@@ -9,6 +9,7 @@ import Contact from './Pages/Contact'
 import Signup from './Pages/Signup'
 import ProductPage from './Pages/ProductPage'
 import Footer from './Components/Footer'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     < >
+      <ScrollToTop/>
       <Navbar />
 
       <Routes>
