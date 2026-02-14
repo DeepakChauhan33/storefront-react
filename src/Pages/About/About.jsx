@@ -27,7 +27,7 @@ const About = () => {
 
             <div className='lg:gap-3'>
               <span className='text-xl sm:text-2xl lg:text-3xl font-bold'>100%</span>
-              <p className='text-sm text-gray-600'>Sustainable Materials</p>
+              <p className='text-xs md:text-sm text-gray-600'>Sustainable Materials</p>
             </div>
 
             <div className='gap-3'>
