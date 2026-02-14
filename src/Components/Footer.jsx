@@ -10,7 +10,7 @@ const Footer = () => {
 
           {/* Column 1 - Brand */}
           <div>
-            <h2 className="text-2xl font-bold text-white mb-4">ESSENCE.</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">StoreFront.</h2>
             <p className="text-sm text-gray-400 leading-6 mb-6">
               Minimal fashion for the modern world. Redefining style with
               sustainability and authenticity at our core.

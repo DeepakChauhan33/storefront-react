@@ -46,12 +46,12 @@ const Home = () => {
         <>
 
             <section 
-            className='h-screen bg-[url(https://plus.unsplash.com/premium_photo-1760574612930-79d88fd52ce6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center lg:bg-right  flex  justify-end items-start lg:items-center  lg:justify-start p-5 lg:p-10'>
+            className='h-screen bg-[url(https://plus.unsplash.com/premium_photo-1760574612930-79d88fd52ce6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center lg:bg-right  flex  justify-center items-center md:justify-start lg:items-center  lg:justify-start p-5 lg:p-10'>
 
 
                 <div className='  max-w-xl space-y-6 '>
                     <h1 className='text-3xl md:text-4xl lg:text-7xl font-extrabold'>Discover Style. <br></br>Define Yourself.</h1>
-                    <p className='text-gray-800 text-xl lg:text-2xl font-normal'>Minimal fashion for the modern world. Curated pieces that speak volumes through simplicity.</p>
+                    <p className='text-gray-800 text-md  md:text-xl lg:text-2xl font-normal'>Minimal fashion for the modern world. Curated pieces that speak volumes through simplicity.</p>
                     <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">Shop Now</button>
                 </div>
 

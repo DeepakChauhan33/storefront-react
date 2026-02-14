@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { FaBarsStaggered } from "react-icons/fa6";
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-md py-1">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+      <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
 
           {/* LEFT - LOGO */}
           <div className="text-2xl font-bold text-black">
-            <Link to="/">MyStore</Link>
+            <Link to="/">StoreFront</Link>
           </div>
 
           {/* CENTER - SEARCH BAR (Hidden on small screens) */}
@@ -40,7 +43,7 @@ const Navbar = () => {
           {/* MOBILE MENU BUTTON */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
-              ☰
+              <FaBarsStaggered className="text-2xl" />
             </button>
           </div>
         </div>
