@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md py-1">
-      <div className="max-w-7xl mx-auto px-6 py-3">
+    <nav className="bg-white flex justify-center items-center shadow-md py-1">
+      <div className="w-full  px-6 py-3">
         <div className="flex items-center justify-between">
 
           {/* LEFT - LOGO */}
@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
 
           {/* CENTER - SEARCH BAR (Hidden on small screens) */}
-          <div className="hidden md:flex flex-1 mx-6">
+          <div className="hidden  md:flex flex-1 mx-12">
             <input
               type="text"
               placeholder="Search products..."
@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
 
           {/* RIGHT - DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden w-1/3 md:flex text-lg font-semibold items-center gap-10">
             <Link to="/" className="hover:text-gray-600">Home</Link>
             <Link to="/products" className="hover:text-gray-600">Products</Link>
             <Link to="/about" className="hover:text-gray-600">About</Link>

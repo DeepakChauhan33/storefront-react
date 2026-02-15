@@ -13,14 +13,14 @@ const ProductCard = ({ products }) => {
 
             {products.map((items) => {
                 return <div
-                    className='flex flex-col justify-between rounded-lg border shadow-md border-gray-200 min-h-[450px] p-3 space-y-3 '
+                    className='flex flex-col justify-between rounded-lg border shadow-md border-gray-200 min-h-[450px] p-3 pb-4 space-y-3 '
                     id={items.id}>
 
                     
 
                         {/* Image Div */}
                         <Link to={'/product/' + items.id}>
-                        <div className='h-60 w-full rounded-lg overflow-hidden mb-5 '>
+                        <div className='h-70 w-full rounded-lg overflow-hidden mb-5 '>
                             <img src={items.image} alt={items.title} className='h-full w-full bg-gray-200 p-3 object-contain' />
                         </div>
                         </Link>
@@ -43,10 +43,10 @@ const ProductCard = ({ products }) => {
 
 
                         {/* Div contain product price and button */}
-                        <div className='flex  justify-between mt-3 '>
+                        <div className='flex  justify-between mt-2 '>
 
                             {/* Product Price */}
-                            <p className='text-2xl lg:text-3xl  font-bold'>$ {items.price}</p>
+                            <p className='text-2xl lg:text-3xl  font-bold'>${items.price}</p>
 
 
                             {/*Add to Cart Button */}

@@ -241,7 +241,7 @@ const ProductPageDesign = ({ product }) => {
 
 
       <div>
-        <h2>You might also like</h2>
+      
 
         <div>
           {/* Similar products based on category */}

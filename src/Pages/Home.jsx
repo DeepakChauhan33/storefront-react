@@ -62,27 +62,27 @@ const Home = () => {
 
 
 
-            <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 p-8 bg-gray-200/50 ">
+            <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 p-3 md:p-6 lg:p-8 pb-6 bg-gray-200/50 ">
                 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
+                <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
                     {allProduct.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80}/>}
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     {allProduct.length > 0 ? <Card heading="Women's Clothing" product={womenCloths} /> : <Loader size={80}/>}
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     {allProduct.length > 0 ? <Card heading="Electronics" product={electronics} /> : <Loader size={80}/>}
                 </div>
 
-                <div className="bg-white rounded-xl shadow-md p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     {allProduct.length > 0 ? <Card heading="Jewellery" product={jewellery} /> : <Loader size={80}/>}
                 </div>
             </section>
 
 
-            <section className='bg-[#f8fafcf0] space-y-6 px-2 lg:px-6 py-10 scrolling-smooth'>
+            <section className='bg-[#ffffff] space-y-6 px-2 lg:px-6 py-10 scrolling-smooth'>
                 <p className='text-2xl font-semibold'>See more products here</p>
 
                 <div className=' grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-6'>

@@ -67,7 +67,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-500">
-          © 2026 Essence Fashion. All rights reserved.
+          © 2026 StoreFront Fashion. All rights reserved.
         </div>
 
       </div>
