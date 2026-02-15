@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Card from '../Components/CategoryCard';
 import ProductCard from '../Components/ProductCard';
 import Loader from '../Components/Loader';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -64,9 +65,11 @@ const Home = () => {
 
             <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 p-3 md:p-6 lg:p-8 pb-6 bg-gray-200/50 ">
                 
+                <Link to ={`/product'+ ${menCloths}`}>
                 <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
                     {allProduct.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80}/>}
                 </div>
+                </Link>
 
                 <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
                     {allProduct.length > 0 ? <Card heading="Women's Clothing" product={womenCloths} /> : <Loader size={80}/>}

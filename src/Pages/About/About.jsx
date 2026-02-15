@@ -30,15 +30,15 @@ const About = () => {
               <p className='text-xs md:text-sm text-gray-600'>Sustainable Materials</p>
             </div>
 
-            <div className='gap-3'>
+            <div className='lg:gap-3'>
               <span className='text-xl sm:text-2xl lg:text-3xl font-bold'>100%</span>
-              <p className='text-sm text-gray-600'>Happy Customers</p>
+              <p className='text-xs md:text-sm text-gray-600'>Happy Customers</p>
             </div>
 
 
-            <div className='gap-3'>
+            <div className='lg:gap-3'>
               <span className='text-xl sm:text-2xl lg:text-3xl font-bold'>2024</span>
-              <p className='text-sm text-gray-600'>Founded</p>
+              <p className='text-xs md:text-sm text-gray-600'>Founded</p>
             </div>
 
 
