@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white flex justify-center items-center shadow-md py-1">
+    <nav className="w-full bg-red-100 flex justify-center items-center shadow-md py-1">
       <div className="w-full  px-6 py-3">
         <div className="flex items-center justify-between">
 
@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
 
           {/* CENTER - SEARCH BAR (Hidden on small screens) */}
-          <div className="hidden  md:flex flex-1 mx-12">
+          <div className="hidden  md:flex flex-1 mx-8 lg:mx-12">
             <input
               type="text"
               placeholder="Search products..."
@@ -27,14 +27,14 @@ const Navbar = () => {
           </div>
 
           {/* RIGHT - DESKTOP MENU */}
-          <div className="hidden w-1/3 md:flex text-lg font-semibold items-center gap-10">
+          <div className="hidden  md:flex md:text-md lg:text-lg font-semibold items-center  md:gap-8 xl:gap-10">
             <Link to="/" className="hover:text-gray-600">Home</Link>
             <Link to="/products" className="hover:text-gray-600">Products</Link>
             <Link to="/about" className="hover:text-gray-600">About</Link>
             <Link to="/contact" className="hover:text-gray-600">Contact</Link>
             <Link
               to="/signin"
-              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+              className="bg-black text-white px-2 lg:px-4 py-2 rounded-lg hover:bg-gray-800"
             >
               Sign In
             </Link>
