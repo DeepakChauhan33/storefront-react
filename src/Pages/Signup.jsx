@@ -4,16 +4,17 @@ const Signup = () => {
   return (
     <>
 
-      <div className='w-full p-15 flex justify-center items-center '>
+      <div className='w-full p-8 md:p-10 lg:p-12 xl:p-15 flex flex-col justify-center items-center space-y-5 '>
 
+      <h2 className='text-3xl font-semibold'>Login</h2>
 
-        <form className='w-1/2 border p-6 rounded-sm space-y-3'>
+        <form className='w-full md:w-[60%]  lg:w-1/2 shadow-lg shadow-gray-400 p-6 rounded-md space-y-3'>
 
           {/* FOR EMAIL */}
           <div className='flex flex-col gap-y-3  p-2 rounded-md '>
             <label className='text-lg font-normal' htmlFor="email">Email</label>
             <input
-              className='py-5 px-2 outline-none border rounded-md transition focus:border-blue-600 duration-400'
+              className='p-3 md:p-4  px-2 outline-none border rounded-md transition focus:border-blue-600 duration-400'
               type="email"
               id='email'
               placeholder='Email' />
@@ -24,7 +25,7 @@ const Signup = () => {
           <div className='flex flex-col gap-y-3  p-2 rounded-md '>
             <label className='text-lg font-normal' htmlFor="password">Password</label>
             <input
-              className='py-5 px-2 outline-none border rounded-md transition focus:border-blue-600 ease-in-out duration-400 '
+              className='p-3 md:p-4  px-2 outline-none border rounded-md transition focus:border-blue-600 ease-in-out duration-400 '
               type="password"
               id='password'
               placeholder='Password' />
@@ -35,7 +36,7 @@ const Signup = () => {
 
 
           {/* Forgot Password */}
-          <div className="text-right text-sm">
+          <div className="text-right text-sm mb-5">
             <button
               type="button"
               className="text-gray-500 hover:text-black"
@@ -48,9 +49,9 @@ const Signup = () => {
           {/* For Submit Button */}
           <div>
             <button
-              className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition"
+              className="w-full bg-black text-white py-2 lg:py-3 rounded-lg hover:bg-gray-900 transition"
             >
-              Log in
+              login
             </button>
           </div>
 
