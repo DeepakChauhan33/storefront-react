@@ -51,7 +51,7 @@ const Home = () => {
 
 
                 <div className='  max-w-xl space-y-6 '>
-                    <h1 className='text-3xl md:text-4xl lg:text-7xl font-extrabold'>Discover Style. <br></br>Define Yourself.</h1>
+                    <h1 className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold'>Discover Style. <br></br>Define Yourself.</h1>
                     <p className='text-gray-800 text-md  md:text-xl lg:text-2xl font-normal'>Minimal fashion for the modern world. Curated pieces that speak volumes through simplicity.</p>
                     <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">Shop Now</button>
                 </div>

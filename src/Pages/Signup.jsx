@@ -1,14 +1,25 @@
 import React from 'react'
 
-const Signup = () => {
+const Signup = ({ isLogin, setIsLogin }) => {
+
+  const emailError = document.querySelector('.emailError');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailError.textContent = '4563220888';
+  }
+
+
   return (
     <>
 
-      <div className='w-full p-8 md:p-10 lg:p-12 xl:p-15 flex flex-col justify-center items-center space-y-5 '>
+      <div className='w-full p-8 md:p-10 lg:p-12 xl:p-18 flex flex-col justify-center items-center space-y-5 '>
 
-      <h2 className='text-3xl font-semibold'>Login</h2>
+        <h2 className='text-3xl font-semibold'>Login</h2>
 
-        <form className='w-full md:w-[60%]  lg:w-1/2 shadow-lg shadow-gray-400 p-6 rounded-md space-y-3'>
+        <form
+          onSubmit={handleSubmit}
+          className='w-full md:w-[60%]  lg:w-1/2 shadow-lg shadow-gray-400 p-6 rounded-md space-y-3'>
 
           {/* FOR EMAIL */}
           <div className='flex flex-col gap-y-3  p-2 rounded-md '>
@@ -17,8 +28,12 @@ const Signup = () => {
               className='p-3 md:p-4  px-2 outline-none border rounded-md transition focus:border-blue-600 duration-400'
               type="email"
               id='email'
-              placeholder='Email' />
+              placeholder='Email'
+              required />
+            <p className='emailError text-red-500 p-0 -mt-3'></p>
           </div>
+
+
 
 
           {/* FOR PASSWORD */}
@@ -28,9 +43,10 @@ const Signup = () => {
               className='p-3 md:p-4  px-2 outline-none border rounded-md transition focus:border-blue-600 ease-in-out duration-400 '
               type="password"
               id='password'
-              placeholder='Password' />
+              placeholder='Password'
+              required />
+            <p></p>
           </div>
-
 
 
 
@@ -38,8 +54,8 @@ const Signup = () => {
           {/* Forgot Password */}
           <div className="text-right text-sm mb-5">
             <button
-              type="button"
-              className="text-gray-500 hover:text-black"
+              type="submit"
+              className="text-gray-500 hover:text-black cursor-pointer"
             >
               Forgot Password?
             </button>
