@@ -1,12 +1,21 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { LOGIN } from '../Action/actionType';
+import { loginAction } from '../Action/action';
 
-const Signup = ({ isLogin, setIsLogin }) => {
+const Signup = () => {
+
+  const isLogin = useSelector((state)=>state.isLogin);
+  const dispatch = useDispatch();
+
+
+
 
   const emailError = document.querySelector('.emailError');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailError.textContent = '4563220888';
+    dispatch(loginAction(true));
   }
 
 
@@ -16,9 +25,10 @@ const Signup = ({ isLogin, setIsLogin }) => {
       <div className='w-full p-8 md:p-10 lg:p-12 xl:p-18 flex flex-col justify-center items-center space-y-5 '>
 
         <h2 className='text-3xl font-semibold'>Login</h2>
+        <p>val : {String(isLogin)}</p>
 
         <form
-          onSubmit={handleSubmit}
+          onSubmit={()=>handleSubmit}
           className='w-full md:w-[60%]  lg:w-1/2 shadow-lg shadow-gray-400 p-6 rounded-md space-y-3'>
 
           {/* FOR EMAIL */}

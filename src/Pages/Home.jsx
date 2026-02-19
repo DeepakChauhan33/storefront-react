@@ -11,7 +11,7 @@ const Home = () => {
     const [allProduct, setAllProduct] = useState([]);
 
     useEffect(() => {
-        fetchApi();
+        // fetchApi();
     }, []);
 
 

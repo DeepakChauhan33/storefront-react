@@ -16,7 +16,7 @@ import Products from './Pages/Products'
 function App() {
 
 
-  const [isLogin, setIsLogin] = useState(false);
+  
 
 
   return (
@@ -29,7 +29,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
-        <Route path='/signIn' element={<Signup  isLogin={isLogin} setIsLogin={setIsLogin}/>}></Route>
+        <Route path='/signIn' element={<Signup />}></Route>
         <Route path='/products' element={<Products/>}></Route>
         <Route path='/product/:pd_id' element={<ProductPage />}></Route>
       </Routes>

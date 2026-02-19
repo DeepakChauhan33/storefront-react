@@ -1,18 +1,30 @@
-// CENTRAL SORAGE
+import * as actions from '../Action/actionType';
 
-const initState = {
-    name: "React",
-    age: 5,
-    city: "New York"
+export const initState = {
+
+    isLogin: false,
 }
 
 
 
 const reducer = (state = initState, action) => {
 
-    return state;
-}
+  switch (action.type) {
+    case actions.LOGIN:
+      return {
+        ...state,
+        isLogin: true,
+      };
 
+    case actions.LOGOUT:
+      return {
+        ...state,
+        isLogin: false,
+      };
 
+    default:
+      return state;
+  }
+};
 
 export default reducer;
