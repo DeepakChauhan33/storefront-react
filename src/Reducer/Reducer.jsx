@@ -2,7 +2,7 @@ import * as actions from '../Action/actionType';
 
 export const initState = {
 
-    isLogin: false,
+  isLogin: false,
 }
 
 
@@ -11,12 +11,7 @@ const reducer = (state = initState, action) => {
 
   switch (action.type) {
     case actions.LOGIN:
-      return {
-        ...state,
-        isLogin: true,
-      };
-
-    case actions.LOGOUT:
+      console.log("called reducer");
       return {
         ...state,
         isLogin: false,

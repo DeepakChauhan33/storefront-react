@@ -28,7 +28,7 @@ const Signup = () => {
         <p>val : {String(isLogin)}</p>
 
         <form
-          onSubmit={()=>handleSubmit}
+          onSubmit={handleSubmit}
           className='w-full md:w-[60%]  lg:w-1/2 shadow-lg shadow-gray-400 p-6 rounded-md space-y-3'>
 
           {/* FOR EMAIL */}
