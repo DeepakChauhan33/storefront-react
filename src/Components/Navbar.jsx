@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { FaBarsStaggered } from "react-icons/fa6";
+import { IoCart } from "react-icons/io5";
 
 
 const Navbar = () => {
+
+  const isLogin = useSelector((state) => state.isLogin);
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,12 +38,22 @@ const Navbar = () => {
             <Link to="/products" className="hover:text-gray-600">Products</Link>
             <Link to="/about" className="hover:text-gray-600">About</Link>
             <Link to="/contact" className="hover:text-gray-600">Contact</Link>
-            <Link
-              to="/signin"
-              className="bg-black text-white px-2 lg:px-5 py-2 rounded-md hover:bg-gray-800"
-            >
-              Login
-            </Link>
+            
+            {isLogin ? (
+              <Link
+                to="/profile" 
+                className="text-4xl  min-w-15 text-center"
+              >
+                <IoCart />
+              </Link>
+            ) : (
+              <Link
+                to="/signin"
+                className="bg-black text-white px-4 py-2 rounded-lg text-center"
+              >
+                Sign In
+              </Link>
+            )}
           </div>
 
           {/* MOBILE MENU BUTTON */}

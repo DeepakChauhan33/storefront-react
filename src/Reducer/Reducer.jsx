@@ -14,7 +14,7 @@ const reducer = (state = initState, action) => {
       console.log("called reducer");
       return {
         ...state,
-        isLogin: false,
+        isLogin: action.payload,
       };
 
     default:

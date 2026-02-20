@@ -10,6 +10,12 @@ const Signup = () => {
 
 
 
+  // FORM STATE 
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+
+
+
 
   const emailError = document.querySelector('.emailError');
 
