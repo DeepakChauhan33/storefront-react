@@ -8,9 +8,10 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { Provider } from 'react-redux';
 import reducer from './Reducer/Reducer.jsx';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import { thunk } from 'redux-thunk'
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(thunk));
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>

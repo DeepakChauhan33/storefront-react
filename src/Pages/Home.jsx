@@ -1,39 +1,55 @@
 import axios, { all } from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Card from '../Components/CategoryCard';
 import ProductCard from '../Components/ProductCard';
 import Loader from '../Components/Loader';
 import { Link } from 'react-router-dom';
+import { useSelector,useDispatch } from 'react-redux';
+
+
+// Actions
+import { getProducts } from '../Action/action';
+
+
+
+
 
 
 const Home = () => {
 
-    const [allProduct, setAllProduct] = useState([]);
+    // const [allProduct, setAllProduct] = useState([]);
+
+
+
+    // Dispatch
+    const dispatch = useDispatch();
+
+    const products = useSelector((state) => state.products);
 
     useEffect(() => {
-        fetchApi();
+        dispatch(getProducts());
     }, []);
 
 
 
-    async function fetchApi() {
+    // async function fetchApi() {
 
-        try {
-            let respose = await axios.get("https://fakestoreapi.com/products")
-            setAllProduct(respose.data);
+    //     try {
+    //         let respose = await axios.get("https://fakestoreapi.com/products")
+    //         setAllProduct(respose.data);
 
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
 
-    const menCloths = allProduct.filter((item) => item.category === "men's clothing");
-    const womenCloths = allProduct.filter((item) => item.category === "women's clothing");
-    const electronics = allProduct.filter((item) => item.category === "electronics");
-    const jewellery = allProduct.filter((item) => item.category === "jewelery");
+
+
+    const menCloths = products.filter((item) => item.category === "men's clothing");
+    const womenCloths = products.filter((item) => item.category === "women's clothing");
+    const electronics = products.filter((item) => item.category === "electronics");
+    const jewellery = products.filter((item) => item.category === "jewelery");
 
 
 
@@ -46,8 +62,8 @@ const Home = () => {
     return (
         <>
 
-            <section 
-            className='h-screen bg-[url(https://plus.unsplash.com/premium_photo-1760574612930-79d88fd52ce6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center lg:bg-right  flex  justify-center items-center md:justify-start lg:items-center  lg:justify-start p-5 lg:p-10'>
+            <section
+                className='h-screen bg-[url(https://plus.unsplash.com/premium_photo-1760574612930-79d88fd52ce6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-center lg:bg-right  flex  justify-center items-center md:justify-start lg:items-center  lg:justify-start p-5 lg:p-10'>
 
 
                 <div className='  max-w-xl space-y-6 '>
@@ -58,29 +74,29 @@ const Home = () => {
 
 
 
-                
+
             </section>
 
 
 
             <section className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-6 gap-8 p-3 md:p-6 lg:p-8 pb-6 bg-gray-200/50 ">
-                
-                <Link to ={`/product'+ ${menCloths}`}>
-                <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
-                    {allProduct.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80}/>}
-                </div>
+
+                <Link to={`/product'+ ${menCloths}`}>
+                    <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300 ">
+                        {products.length > 0 ? <Card heading="Men's Clothing" product={menCloths} /> : <Loader size={80} />}
+                    </div>
                 </Link>
 
                 <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    {allProduct.length > 0 ? <Card heading="Women's Clothing" product={womenCloths} /> : <Loader size={80}/>}
+                    {products.length > 0 ? <Card heading="Women's Clothing" product={womenCloths} /> : <Loader size={80} />}
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    {allProduct.length > 0 ? <Card heading="Electronics" product={electronics} /> : <Loader size={80}/>}
+                    {products.length > 0 ? <Card heading="Electronics" product={electronics} /> : <Loader size={80} />}
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-2 lg:p-4 h-110 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    {allProduct.length > 0 ? <Card heading="Jewellery" product={jewellery} /> : <Loader size={80}/>}
+                    {products.length > 0 ? <Card heading="Jewellery" product={jewellery} /> : <Loader size={80} />}
                 </div>
             </section>
 
@@ -89,10 +105,10 @@ const Home = () => {
                 <p className='text-2xl font-semibold'>See more products here</p>
 
                 <div className=' grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-6'>
-                    {allProduct.length > 0 ? <ProductCard products={allProduct} /> : <Loader size={50}/>}
+                    {products.length > 0 ? <ProductCard products={products} /> : <Loader size={50} />}
                 </div>
 
-                
+
             </section>
 
 
