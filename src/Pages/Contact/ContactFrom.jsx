@@ -5,7 +5,7 @@ const ContactFrom = () => {
 
             
             <from 
-                className="w-1/2 border-2 border-gray-300 rounded-lg p-5 flex flex-col gap-5"
+                className="w-full border-2 border-gray-300 rounded-lg p-5 flex flex-col gap-5"
             >
 
                 <div className='flex flex-col'>
